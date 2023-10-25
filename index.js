@@ -33,7 +33,7 @@ function start() {
             return bot.sendMessage(chatID, `${current_quote} \n\n Ⓒ <em>${current_author}</em>`, {parse_mode: "html"});
         }
 
-        return bot.sendMessage(chatID, 'Я тебя не понял. Попробуй ещё раз.');
+        // return bot.sendMessage(chatID, 'Я тебя не понял. Попробуй ещё раз.');
     });
 }
 
