@@ -16,7 +16,11 @@ function start() {
         {
             command: '/quote',
             description: 'Генерация случайной цитаты.'
-        }
+        },
+        // {
+        //     command: '/voice',
+        //     description: 'Генерация случайного голосового.'
+        // }
     ]);
     
     bot.on('message', async (msg) => {
@@ -26,11 +30,20 @@ function start() {
         if (text === '/start' || text === '/start@kn223d_quotes_bot') {
             return bot.sendMessage(chatID, 'Привет!');
         } else if (text === '/quote' || text === '/quote@kn223d_quotes_bot') {
+            const chatID = msg.chat.id;
+
             const current_index = getRandomInt(0, quotes.length);
             const current_quote = quotes[current_index].text;
             const current_author = quotes[current_index].author;
 
             return bot.sendMessage(chatID, `${current_quote} \n\n Ⓒ <em>${current_author}</em>`, {parse_mode: "html"});
+        } else if (text === '/voice' || text === '/voice@kn223d_quotes_bot') {
+            const chatID = msg.chat.id;
+
+            const voiceFilePath = './voice/aaaa-za-donbass.ogg';
+            
+            bot.sendVoice(chatID, voiceFilePath);
+
         }
 
         // return bot.sendMessage(chatID, 'Я тебя не понял. Попробуй ещё раз.');
