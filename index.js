@@ -17,10 +17,10 @@ function start() {
             command: '/quote',
             description: 'Генерация случайной цитаты.'
         },
-        // {
-        //     command: '/voice',
-        //     description: 'Генерация случайного голосового.'
-        // }
+        {
+            command: '/voice',
+            description: 'Генерация случайного голосового.'
+        }
     ]);
     
     bot.on('message', async (msg) => {
