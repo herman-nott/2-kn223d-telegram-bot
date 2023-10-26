@@ -42,7 +42,7 @@ function start() {
 
             const current_voice_index = getRandomInt(1, 13);
 
-            const voiceFilePath = `./voice/${current_voice_index}.odd`;
+            const voiceFilePath = `./voice/${current_voice_index}.ogg`;
             
             bot.sendVoice(chatID, voiceFilePath);
 
