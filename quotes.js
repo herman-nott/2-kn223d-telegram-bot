@@ -64,8 +64,8 @@ const quotes = [
         author: 'herman_nott'
     },
     {
-        text: 'Захар милфхантер, сердце разбили.',
-        author: 'ministerstvomigraciy'
+        text: 'Захар милфхантер, ему сердце разбили.',
+        author: 'catbreadik'
     },
     {
         text: 'Бородатые мужики ☠️.',
@@ -141,7 +141,7 @@ const quotes = [
     },
     {
         text: 'Язык Кирила - кирильский.',
-        author: 'Mariecurietop'
+        author: 'catbreadik'
     },
     {
         text: 'Есть Кирилл, а есть Кирил, это нужно для баланса Вселенной.',
@@ -188,8 +188,60 @@ const quotes = [
         author: 'Шеїна'
     },
     {
-        text: 'Милф хантер в деле.',
+        text: 'Милфхантер в деле.',
         author: 'ministerstvomigraciy'
+    },
+    {
+        text: 'Хочешь шишку в жопу?',
+        author: 'catbreadik'
+    },
+    {
+        text: 'Хахаха, так и знал, что заплачешь.',
+        author: 'Tgk331'
+    },
+    {
+        text: '"Пошел нахуй" - фраза, которая решает все, можешь воспользоваться.',
+        author: 'herman_nott'
+    },
+    {
+        text: 'Ну в принципе, Таиланд вооружили и на этом спасибо.',
+        author: 'catbreadik'
+    },
+    {
+        text: 'У тебя по факту будет секс с чешской сосной.',
+        author: 'catbreadik'
+    },
+    {
+        text: 'Ля, любовь, ХПІ місце яке об\'єднує',
+        author: 'Puzidarov'
+    },
+    {
+        text: 'Объеднує твой анус с 50см дилдаком.',
+        author: 'qwicklyy'
+    },
+    {
+        text: 'Я забыл, что ты женщина, прости.',
+        author: 'qwicklyy'
+    },
+    {
+        text: 'Так и знал, что ти бурятка.',
+        author: 'qwicklyy'
+    },
+    {
+        text: 'Инцест программистов залупами.',
+        author: 'qwicklyy'
+    },
+    {
+        text: 'Не зараховано, це не ваш варіант. Ваш 1.',
+        author: 'Дубинина'
+    },
+    {
+        text: 'Диктатор уважает нашу свободу.',
+        author: 'catbreadik'
+    },
+    {
+        text: 'ҺҮЙ.',
+        author: 'Mariecurietop'
     },
 ];
 
