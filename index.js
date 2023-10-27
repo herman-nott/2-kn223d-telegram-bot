@@ -44,7 +44,7 @@ function start() {
 
             const voiceFilePath = `./voice/${current_voice_index}.ogg`;
             
-            bot.sendVoice(chatID, voiceFilePath);
+            return bot.sendVoice(chatID, voiceFilePath);
 
         }
 
