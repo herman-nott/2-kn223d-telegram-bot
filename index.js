@@ -30,7 +30,7 @@ function start() {
         if (text === '/start' || text === '/start@kn223d_quotes_bot') {
             return bot.sendMessage(chatID, 'Привет!');
         } else if (text === '/quote' || text === '/quote@kn223d_quotes_bot') {
-            const chatID = msg.chat.id;
+            // const chatID = msg.chat.id;
 
             const current_index = getRandomInt(0, quotes.length);
             const current_quote = quotes[current_index].text;
@@ -38,11 +38,11 @@ function start() {
 
             return bot.sendMessage(chatID, `${current_quote} \n\n Ⓒ <em>${current_author}</em>`, {parse_mode: "html"});
         } else if (text === '/voice' || text === '/voice@kn223d_quotes_bot') {
-            const chatID = msg.chat.id;
+            // const chatID = msg.chat.id;
 
             const current_voice_index = getRandomInt(1, 31);
 
-            const voiceFilePath = `./voice/${current_voice_index}.ogg`;
+            const voiceFilePath = `./voice/${current_voice_index}.mp3`;
             
             return bot.sendVoice(chatID, voiceFilePath);
 
