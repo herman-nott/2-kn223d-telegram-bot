@@ -7,25 +7,59 @@ const token = '6804817926:AAGNQsMKvKQFjF7PxpYxGQfOrllVFLxJUMI';
 
 const bot = new TelegramApi(token, {polling: true});
 
+const messageCounters = {};
+
+const commands = [
+    {
+        command: '/start',
+        description: 'Приветствие.'
+    },
+    {
+        command: '/quote',
+        description: 'Генерация случайной цитаты.'
+    },
+    {
+        command: '/voice',
+        description: 'Генерация случайного голосового.'
+    }
+]
+
+
+
 function start() {
-    bot.setMyCommands([
-        {
-            command: '/start',
-            description: 'Приветствие.'
-        },
-        {
-            command: '/quote',
-            description: 'Генерация случайной цитаты.'
-        },
-        {
-            command: '/voice',
-            description: 'Генерация случайного голосового.'
-        }
-    ]);
+    bot.setMyCommands(commands);
     
     bot.on('message', async (msg) => {
         const text = msg.text;
         const chatID = msg.chat.id;
+
+        if (msg.chat.type === 'group' || msg.chat.type === 'supergroup' || msg.chat.type === 'private') {
+            if (!messageCounters[chatID]) {
+                messageCounters[chatID] = 0;
+            }
+        }
+        messageCounters[chatID]++;
+
+        if (messageCounters[chatID] % 100 === 0) {
+            const quote_or_voice = getRandomInt(0, 2)
+
+            const messageId = msg.message_id;
+
+            if (quote_or_voice === 0) {
+                const current_index = getRandomInt(0, quotes.length);
+                const current_quote = quotes[current_index].text;
+                const current_author = quotes[current_index].author;
+
+                return bot.sendMessage(chatID, `${current_quote} \n\n Ⓒ <em>${current_author}</em>`, {reply_to_message_id: messageId, parse_mode: "html"});
+            } else if (quote_or_voice === 1) {
+                const current_voice_index = getRandomInt(1, 31);
+
+                const voiceFilePath = `./voice/${current_voice_index}.mp3`;
+                
+                return bot.sendVoice(chatID, voiceFilePath, {reply_to_message_id: messageId});
+            }
+        }
+
     
         if (text === '/start' || text === '/start@kn223d_quotes_bot') {
             return bot.sendMessage(chatID, 'Привет!');
