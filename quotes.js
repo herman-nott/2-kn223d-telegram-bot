@@ -275,6 +275,10 @@ const quotes = [
         text: 'Сам код - ок.',
         author: 'Зверцева'
     },
+    {
+        text: 'Пані Тетяна, назвіть число від 1 до 16.',
+        author: 'Кизилов'
+    },
 ];
 
 module.exports = quotes

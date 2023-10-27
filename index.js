@@ -40,7 +40,7 @@ function start() {
         } else if (text === '/voice' || text === '/voice@kn223d_quotes_bot') {
             const chatID = msg.chat.id;
 
-            const current_voice_index = getRandomInt(1, 13);
+            const current_voice_index = getRandomInt(1, 31);
 
             const voiceFilePath = `./voice/${current_voice_index}.ogg`;
             
