@@ -40,7 +40,7 @@ function start() {
         }
         messageCounters[chatID]++;
 
-        if (messageCounters[chatID] % 100 === 0) {
+        if (messageCounters[chatID] % 50 === 0) {
             const quote_or_voice = getRandomInt(0, 2)
 
             const messageId = msg.message_id;
