@@ -91,7 +91,7 @@ function start() {
             
             return bot.sendVoice(chatID, voiceFilePath);
 
-        } else if (pytannya.includes(text.toLowerCase())) {
+        } else if (pytannya.includes(String(text).toLowerCase())) {
             const messageId = msg.message_id;
             const gifFilePath = './gif/ni.gif';
 
