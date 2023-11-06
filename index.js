@@ -1,3 +1,14 @@
+const pytannya = ['можна питання?', 
+                'можна питання', 
+                'можно питання?', 
+                'можно питання', 
+                'можна пытання?', 
+                'можна пытання', 
+                'можно пытання?', 
+                'можно пытання'
+];
+
+
 const quotes = require('./quotes.js'); // quotes list
 const getRandomInt = require('./functions.js'); // getRandomInt function
 
@@ -80,6 +91,11 @@ function start() {
             
             return bot.sendVoice(chatID, voiceFilePath);
 
+        } else if (pytannya.includes(text.toLowerCase())) {
+            const messageId = msg.message_id;
+            const gifFilePath = './gif/ni.gif';
+
+            return bot.sendAnimation(chatID, gifFilePath, {reply_to_message_id: messageId})
         }
 
         // return bot.sendMessage(chatID, 'Я тебя не понял. Попробуй ещё раз.');
