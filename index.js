@@ -7,7 +7,6 @@ const pytannya = ['можна питання?',
                 'можно пытання?', 
                 'можно пытання'
 ];
-let pytannyaCounter = 0;
 
 
 const quotes = require('./quotes.js'); // quotes list
@@ -93,13 +92,10 @@ function start() {
             return bot.sendVoice(chatID, voiceFilePath);
 
         } else if (pytannya.includes(String(text).toLowerCase())) {
-            pytannyaCounter++;
-            if (pytannyaCounter % 10 === 0) {
-                const messageId = msg.message_id;
-                const gifFilePath = './gif/ni.gif';
+            const messageId = msg.message_id;
+            const gifFilePath = './gif/ni.gif';
 
-                return bot.sendAnimation(chatID, gifFilePath, {reply_to_message_id: messageId})
-            }
+            return bot.sendAnimation(chatID, gifFilePath, {reply_to_message_id: messageId})
         }
 
         // return bot.sendMessage(chatID, 'Я тебя не понял. Попробуй ещё раз.');
