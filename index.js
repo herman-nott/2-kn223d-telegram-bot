@@ -32,6 +32,10 @@ const commands = [
     {
         command: '/voice',
         description: 'Генерация случайного голосового.'
+    },
+    {
+        command: '/music',
+        description: 'Песня.'
     }
 ]
 
@@ -96,6 +100,12 @@ function start() {
             const gifFilePath = './gif/ni.gif';
 
             return bot.sendAnimation(chatID, gifFilePath, {reply_to_message_id: messageId})
+        } else if (text === '/music' || text === '/music@kn223d_quotes_bot') {
+            const current_music_index = getRandomInt(1, 11);
+
+            const musicFilePath = `./music/${current_music_index}.mp4`;
+            
+            return bot.sendVideoNote(chatID, musicFilePath);
         }
 
         // return bot.sendMessage(chatID, 'Я тебя не понял. Попробуй ещё раз.');
