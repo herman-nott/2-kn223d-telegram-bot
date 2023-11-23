@@ -106,6 +106,11 @@ function start() {
             const musicFilePath = `./music/${current_music_index}.mp4`;
             
             return bot.sendVideoNote(chatID, musicFilePath);
+        } else if (msg.text.toLowerCase().includes('гамазин') || msg.text.toLowerCase().includes('гамазін')) {
+            const messageId = msg.message_id;
+            const gifFilePath = './gif/gamazin.gif';
+
+            return bot.sendAnimation(chatID, gifFilePath, {reply_to_message_id: messageId});
         }
 
         // return bot.sendMessage(chatID, 'Я тебя не понял. Попробуй ещё раз.');
