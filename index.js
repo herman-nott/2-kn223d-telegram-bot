@@ -86,6 +86,7 @@ function start() {
             const current_author = quotes[current_index].author;
 
             return bot.sendMessage(chatID, `${current_quote} \n\n Ⓒ <em>${current_author}</em>`, {parse_mode: "html"});
+            
         } else if (text === '/voice' || text === '/voice@kn223d_quotes_bot') {
             // const chatID = msg.chat.id;
 
@@ -101,11 +102,11 @@ function start() {
 
             return bot.sendAnimation(chatID, gifFilePath, {reply_to_message_id: messageId})
         } else if (text === '/music' || text === '/music@kn223d_quotes_bot') {
-            const current_music_index = getRandomInt(1, 11);
+            const current_music_index = getRandomInt(1, 16);
 
             const musicFilePath = `./music/${current_music_index}.mp4`;
             
-            return bot.sendVideoNote(chatID, musicFilePath);
+            return bot.sendVideoNote(chatID, musicFilePath); 
         } else if (String(text).toLowerCase().includes('гамазин') || String(text).toLowerCase().includes('гамазін')) {
             const messageId = msg.message_id;
             const gifFilePath = './gif/gamazin.gif';
